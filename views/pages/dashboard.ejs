@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angApp">
+<head>
+    <% include ../partials/dashboard.ejs %>
+
+    <!-- Place Angular App Scripts here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="/javascript/angular/app_core.js"></script>
+    <script src="/javascript/angular/angController.js"></script>
+    <script src="/javascript/angular/angService.js"></script>
+    <script src="/javascript/angular/tokensController.js"></script>
+    <script src="/javascript/angular/register.js"></script>
+        <script src="/javascript/angular/angWorkouts.js"></script>
+</head>
+
+<body ng-cloak class="ng-cloak" ng-controller="dashController">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'/>
+
+<% include ../partials/dash_nav.ejs %>
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- // Start Statistical section  -->
+    TODO::visual list from http://bl.ocks.org/mbostock/4b66c0d9be9a0d56484e
+    TODO::To be adapted into a visual line graph for visually appealing workout display
+
+            <div class="row">
+            <div class="col-sm-12 resetter">
+                <div class="well crimson">
+                    <h1>Welcome, <%= user.username %> </h1>
+
+                    <span></span>
+
+                    <h4>Runner Stastistics</h4>
+                    <p>Here you will find all of your statistics organized visually for you.</p>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-grey">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-level-up" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">{{totalRuns}}</div>
+                                        <div>Total Runs</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-grey">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="material-icons">directions_run</i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">{{totalMiles | number:2}}</div>
+                                        <div>Total Miles</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-grey">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">7:59*</div>
+                                        <div>Average Mile</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-grey">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                       <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">{{averageRun | number:2}}</div>
+                                        <div>Average Run</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-grey">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">53*</div>
+                                        <div>Average Resting HR</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-grey">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-balance-scale" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">175*</div>
+                                        <div>Average Weight</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-grey">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">{{totalDuration.hours}}:{{totalDuration.minutes}}:{{totalDuration.seconds}}.{{totalDuration.miliseconds}}</div>
+                                        <div>**Total Duration</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="well">
+                            <p>Upcoming Workouts</p>
+                            <p>Text</p>
+                            <p>Text</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="well">
+                            <p>Upcoming Races</p>
+                            <p>Text</p>
+                            <p>Text</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="well">
+                            <p>Text</p>
+                            <p>Text</p>
+                            <p>Text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="well">
+                            <p>Text</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="well">
+                            <p>Text</p>
+                        </div>
+                    </div>
+                </div>
+<p style="color: #fff">*Numbers marked with * are dummy numbers. Everything else is generated based on workouts.</p>
+
+<p style="color: #fff">**Will format total time to match regular time units, for now just adds each time unit.</p>
+
+
+        </div>
+            </div>
+    <!-- // END stastical Section -->
+
+    <!-- FOOTER -->
+    <div class="container">
+        <!--/*/ <th:block th:include="fragments/_footer :: footer"></th:block> /*/-->
+    </div>
+</div>
+</body>
+
+</html>

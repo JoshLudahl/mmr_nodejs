@@ -1,0 +1,132 @@
+﻿/*
+
+COLORS: 
+-White #fff
+-Greyish dark #323B3C
+-greyish light #516163
+-bluish #63B2BB
+
+
+*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+body {
+    color: #323B3C;
+    background-color:#fff;
+    font-family: 'Lato', sans-serif;
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+html { height: 100%; }
+
+
+.soc-icons {
+    padding-top:1em;
+}
+.soc-icons li {
+    display:inline;
+    list-style-type:none;
+    padding:.25em;
+}
+.jumbotron {
+    background-color: #fff;
+    color: #323B3C;
+    margin-bottom: 0;
+    padding-bottom:0;
+}
+.fa, i {
+    color: #CACCCC;
+}
+.about {
+    color:#114C66;
+    padding: 0;
+}
+p.about {
+    color:#323B3C;
+    padding:0;
+    margin:0;
+}
+
+.con {
+    color:#fff;
+}
+.snot ul, .snot li {
+    margin:0;
+    padding:0;
+    padding-right: 1em;
+    display:inline;
+    list-style-type:none;
+}
+.crap {
+    padding-top: 2em;
+}
+.dung {
+    margin: auto;
+    width: 50%;
+    border:3px solid #8AC007;
+    padding: 10px;
+}
+.container img {
+    padding: 10px;
+}
+.headliner h1 {
+    font-size: 3.5em;
+}
+#errMsg {
+    color: #f44336;
+}
+
+h1 {
+	color: #323B3C;
+font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 60px;
+	font-weight: 400;
+	line-height: 60px;
+	letter-spacing: 5px;
+	margin-bottom: 48px;
+	text-transform: uppercase;
+}
+
+p {
+	color: #516163;
+font-family: 'PT Sans', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 36px;
+	margin-bottom: 36px;
+}
+
+a {
+	color: #63B2BB;	
+}
+
+a:hover {
+	color: #323B3C;
+}
+.huge {
+  font-size: 3em;
+}
+
+.well, .well>h1, .well>p {
+    color:#fff;
+    background-color: #323B3C;
+}
+
+.panel-grey {
+    border-color: #353634;
+}
+
+.panel-grey .panel-heading {
+    border-color: #353634;
+    color: #fff;
+    background-color: #323B3C;
+}
+
+.panel-grey:hover .panel-heading:hover {
+    border-color: #2B2B2B;
+}

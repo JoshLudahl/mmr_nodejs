@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angApp">
+<head>
+    <% include ../partials/dashboard.ejs %>
+
+    <!-- Place Angular App Scripts here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="/javascript/angular/app_core.js"></script>
+    <script src="/javascript/angular/angController.js"></script>
+    <script src="/javascript/angular/angService.js"></script>
+    <script src="/javascript/angular/tokensController.js"></script>
+    <script src="/javascript/angular/register.js"></script>
+    <script src="/javascript/angular/angWorkouts.js"></script>
+
+    <link rel="stylesheet" href="/stylesheets/tables.css" />
+
+
+</head>
+
+<body ng-cloak class="ng-cloak">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'/>
+
+<link href="/stylesheets/cal.css" rel='stylesheet' type='text/css' />
+<% include ../partials/dash_nav.ejs %>
+
+<!-- MAIN CONTENT -->
+
+<div class="bark">
+    <div class="legend">        
+<span class="entry orange">Completed</span><span class="entry orange">Work</span><span class="entry blue">Sports</span><span class="entry yellow">Kids</span><span class="entry green">Other</span>
+</div>
+<div id="calendar"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+  
+</div>
+<div class="legend">        
+<span class="entry orange">Completed</span><span class="entry orange">Work</span><span class="entry blue">Sports</span><span class="entry yellow">Kids</span><span class="entry green">Other</span>
+</div>
+<script src="/javascript/calendar/cal.js"></script>
+</body>
+</html>
+
+
+
+

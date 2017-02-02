@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angApp">
+<head>
+    <% include ../partials/dashboard.ejs %>
+
+
+   <script src="https://use.fontawesome.com/1f259fae63.js"></script>
+<link rel="stylesheet" href="/stylesheets/login.css" />
+</head>
+
+<body>
+
+
+<% include ../partials/dash_nav.ejs %>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+    <div id="login">
+  <form name='formLog' action="/workouts/add" method="post">
+    <span class="fontawesome-user"></span>
+    <input type="text" name="route" placeholder="Route Name" title="Route Name">
+
+    <span class="fontawesome-lock"></span>
+    <input type="text" name="hours" placeholder="Hour" title="Hour">
+     <span class="fontawesome-lock"></span>
+    <input type="text" name="minutes" placeholder="Minutes" title="Minutes" required="required">
+     <span class="fontawesome-lock"></span>
+    <input type="text" name="seconds" placeholder="Seconds" title="Seconds" required="required">
+     <span class="fontawesome-lock"></span>
+    <input type="text" name="miliseconds" placeholder="Miliseconds" title="Miliseconds">
+     <span class="fontawesome-lock"></span>
+    <input type="text"name="distance" placeholder="Distance" title="Distance" required="required">
+     <span class="fontawesome-lock"><i class="fa fa-calendar" aria-hidden="true"></i></span />
+    <input type="text" name="date" id="datepicker" placeholder="Date mm/dd/yyyy" title="Date" required="required" />
+    <span class="fontawesome-lock"></span />
+    <label>
+    <select name="completed">
+      <option value="true" selected>Completed</option>
+      <option value="false">Future Workout</option>
+    </select>
+    </label>
+                
+            
+
+    <input type="submit" value="Add Workout">
+<p id="errMsg">Insert Error Here</p>
+  </form>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$( "#datepicker" ).datepicker();
+});
+</script>
+</body>
+</html>
+
